@@ -8,7 +8,7 @@ Children:
   - Name: Tables
     Type: BaseObjectType
     Children:
-    - Name: SQLDataLogger
+    - Name: DataLogger1
       Type: ODBCStoreTable
       Children:
       - Class: Reference

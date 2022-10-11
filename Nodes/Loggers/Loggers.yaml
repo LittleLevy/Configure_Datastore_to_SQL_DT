@@ -1,7 +1,7 @@
 Name: Loggers
 Type: FolderType
 Children:
-- Name: SQLDataLogger
+- Name: DataLogger1
   Type: DataLogger
   Children:
   - Name: SamplingMode
