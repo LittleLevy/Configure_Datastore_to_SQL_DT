@@ -39,13 +39,13 @@ Children:
         AccessLevel: Read
         Value: 0
       - Name: DynamicLink
-        Type: DataBind
+        Type: DynamicLink
         DataType: NodePath
         Value: "../../../../Model/Variable1"
         Children:
         - Name: Mode
           Type: BaseVariableType
-          DataType: DataBindModeType
+          DataType: DynamicLinkMode
           Value: 2
   - Class: Reference
     Target: ns=8;i=21

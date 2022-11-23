@@ -41,11 +41,11 @@ Children:
   - Name: Username
     Type: PropertyType
     DataType: String
-    Value: "test"
+    Value: "admin"
   - Name: Password
     Type: PropertyType
     DataType: Password
-    Value: "test"
+    Value: "Cui6512423."
   - Name: MaxColumnNameLength
     Type: BaseDataVariableType
     DataType: UInt32
@@ -104,12 +104,12 @@ Children:
   - Name: Server
     Type: PropertyType
     DataType: String
-    Value: "1PTKFC2.ra-int.com"
+    Value: "182.92.209.136"
   - Name: Port
     Type: PropertyType
-    DataType: String
-    Value: "1433"
+    DataType: UInt16
+    Value: 3306
   - Name: Database
     Type: PropertyType
     DataType: String
-    Value: "master"
+    Value: "project4Lei"

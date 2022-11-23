@@ -91,13 +91,13 @@ Children:
       Value: 0.0
       Children:
       - Name: DynamicLink
-        Type: DataBind
+        Type: DynamicLink
         DataType: NodePath
         Value: "{NodeId:ns=7;g=cf528b07-56fe-d48d-1bcc-0534673cb610}"
         Children:
         - Name: Mode
           Type: BaseVariableType
-          DataType: DataBindModeType
+          DataType: DynamicLinkMode
           ModellingRule: Optional
           Value: 2
     - Name: Width
@@ -143,13 +143,13 @@ Children:
               DataType: NodeId
               Value: {"Id":58}
             - Name: DynamicLink
-              Type: DataBind
+              Type: DynamicLink
               DataType: NodePath
               Value: "../../../../../DataGrid1@NodeId"
               Children:
               - Name: Mode
                 Type: BaseVariableType
-                DataType: DataBindModeType
+                DataType: DynamicLinkMode
                 ModellingRule: Optional
                 Value: 2
           - Name: ns=3;Method
@@ -213,45 +213,10 @@ Children:
     - Name: Query
       Type: BaseDataVariableType
       DataType: String
-      Value: "SELECT * FROM \"DataLogger1\""
+      Value: "SELECT * FROM DataLogger1"
     - Name: Columns
       Type: BaseObjectType
       Children:
-      - Name: Timestamp
-        Type: DataGridColumn
-        Children:
-        - Name: Title
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Timestamp"}
-        - Name: Width
-          Type: BaseDataVariableType
-          DataType: Size
-          Value: -1.0
-        - Name: HeaderAlignment
-          Type: BaseDataVariableType
-          DataType: TextHorizontalAlignment
-          Value: 0
-        - Name: ContentAlignment
-          Type: BaseVariableType
-          DataType: HorizontalAlignment
-          Value: 0
-        - Name: OrderBy
-          Type: BaseDataVariableType
-          DataType: NodePath
-          Value: "{Item}/Timestamp"
-        - Name: DataItemTemplate
-          Type: DataGridLabelItemTemplate
-          Children:
-          - Name: Text
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            Children:
-            - Name: DynamicLink
-              Type: DataBind
-              DataType: NodePath
-              Value: "{Item}/Timestamp"
       - Name: VariableToSample1
         Type: DataGridColumn
         Children:
@@ -284,9 +249,44 @@ Children:
             Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             Children:
             - Name: DynamicLink
-              Type: DataBind
+              Type: DynamicLink
               DataType: NodePath
               Value: "{Item}/VariableToSample1"
+      - Name: Timestamp
+        Type: DataGridColumn
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"Timestamp"}
+        - Name: Width
+          Type: BaseDataVariableType
+          DataType: Size
+          Value: -1.0
+        - Name: HeaderAlignment
+          Type: BaseDataVariableType
+          DataType: TextHorizontalAlignment
+          Value: 0
+        - Name: ContentAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          Value: 0
+        - Name: OrderBy
+          Type: BaseDataVariableType
+          DataType: NodePath
+          Value: "{Item}/VariableToSample1"
+        - Name: DataItemTemplate
+          Type: DataGridLabelItemTemplate
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Item}/Timestamp"
     - Name: SelectedItem
       Type: NodePointer
       DataType: NodeId
@@ -334,7 +334,7 @@ Children:
       Value: {"IdType":0,"Id":0,"Namespace":-1}
       Children:
       - Name: DynamicLink
-        Type: DataBind
+        Type: DynamicLink
         DataType: NodePath
         Value: "../Columns/Timestamp@NodeId"
     - Name: SortOrder
